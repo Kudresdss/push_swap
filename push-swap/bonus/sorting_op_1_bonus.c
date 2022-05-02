@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting_op_1.c                                     :+:      :+:    :+:   */
+/*   sorting_op_1_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymirna <ymirna@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 22:50:12 by ymirna            #+#    #+#             */
-/*   Updated: 2022/03/24 15:14:31 by ymirna           ###   ########.fr       */
+/*   Updated: 2022/03/24 21:31:42 by ymirna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/push_header.h"
+#include "../headers/push_header_bonus.h"
 
 void	do_pa(t_stack	**head_a, t_stack	**head_b, t_stack	*st_b)
 {
@@ -37,7 +37,6 @@ void	do_pa(t_stack	**head_a, t_stack	**head_b, t_stack	*st_b)
 	(*head_a)->prev->next = push;
 	(*head_a)->prev = push;
 	*head_a = push;
-	write(1, "pa\n", 3);
 	return ;
 }
 
@@ -57,7 +56,6 @@ void	do_pb_2(t_stack	**head_b, t_stack	**push)
 		(*head_b)->prev = *push;
 	}
 	*head_b = *push;
-	write(1, "pb\n", 3);
 }
 
 void	do_pb(t_stack	**head_a, t_stack	**head_b, t_stack	*st_a)
@@ -106,7 +104,6 @@ void	do_sa(t_stack	**head)
 	swap->prev = tmp;
 	top = tmp;
 	*head = top;
-	write(1, "sa\n", 3);
 }
 
 void	do_sb(t_stack	**head)
@@ -131,5 +128,4 @@ void	do_sb(t_stack	**head)
 	swap->prev = tmp;
 	top = tmp;
 	*head = top;
-	write(1, "sb\n", 3);
 }

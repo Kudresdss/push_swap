@@ -6,7 +6,7 @@
 #    By: ymirna <ymirna@student.21-school.ru>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/30 13:49:23 by ymirna            #+#    #+#              #
-#    Updated: 2022/03/21 18:44:30 by ymirna           ###   ########.fr        #
+#    Updated: 2022/03/25 17:04:53 by ymirna           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,14 @@ PATH_B		=	bonus/
 PATH_H		=	headers/
 
 SRC_M		=	main.c push_swap.c functs.c functs_list.c split.c \
-				sorting_1.c sorting_op_1.c sorting_op_2.c
+				sorting_1.c sorting_2.c sorting_op_1.c sorting_op_2.c \
+				sort_int.c
 
-SRC_B		= 	checker.c
+SRC_B		= 	checker_bonus.c functs_bonus.c functs_list_bonus.c get_next_line_bonus.c \
+				get_next_line_utils_bonus.c push_swap_bonus.c sort_int_bonus.c \
+				sorting_1_bonus.c sorting_2_bonus.c sorting_op_1_bonus.c sorting_op_2_bonus.c split_bonus.c
 
-HEADER		=	push_header.h
+HEADER		=	push_header.h push_header_bonus.h
 
 SRC_M_P		=	$(addprefix $(PATH_M), $(SRC_M))
 
@@ -50,7 +53,7 @@ $(NAME):	$(OBJS_M) Makefile
 			$(CC) $(FLAGS) $(OBJS_M) -o $(NAME)
 
 bonus:		
-			@make OBJS_M="$(OBJS_B)" all
+			@make OBJS_M="$(OBJS_B)" NAME="checker" all
 
 clean:		
 			rm -f $(OBJS_M)
@@ -58,5 +61,6 @@ clean:
 
 fclean:		clean
 			rm -f $(NAME)
+			rm -f checker
 
 re:			fclean all

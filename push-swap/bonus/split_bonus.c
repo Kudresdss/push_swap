@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   split.c                                            :+:      :+:    :+:   */
+/*   split_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymirna <ymirna@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 22:21:26 by ymirna            #+#    #+#             */
-/*   Updated: 2022/03/22 18:41:25 by ymirna           ###   ########.fr       */
+/*   Updated: 2022/03/24 21:31:51 by ymirna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/push_header.h"
+#include "../headers/push_header_bonus.h"
 
 static size_t	ft_words(char const	*s, char c)
 {

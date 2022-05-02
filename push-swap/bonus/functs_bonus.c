@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   functs.c                                           :+:      :+:    :+:   */
+/*   functs_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymirna <ymirna@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 22:25:08 by ymirna            #+#    #+#             */
-/*   Updated: 2022/03/25 16:25:58 by ymirna           ###   ########.fr       */
+/*   Updated: 2022/03/25 16:27:36 by ymirna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/push_header.h"
-
-size_t	ft_strlen(const char	*s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len])
-	{
-		len++;
-	}
-	return (len);
-}
+#include "../headers/push_header_bonus.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t	len)
 {
@@ -68,6 +56,28 @@ long	ft_atoi(t_stack	*st_a, const char	*str)
 	while ('0' <= str[st_a->y] && str[st_a->y] <= '9')
 		s = s * 10 + (str[st_a->y++] - '0');
 	return (s * st_a->ng);
+}
+
+int	ft_strncmp(const char	*s1, const char	*s2, int x)
+{
+	size_t			i;
+	unsigned char	*ss1;
+	unsigned char	*ss2;
+
+	(void) x;
+	i = 0;
+	ss1 = (unsigned char *)s1;
+	ss2 = (unsigned char *)s2;
+	while (ss1[i] && ss2[i])
+	{
+		if (ss1[i] == s2[i])
+			i++;
+		else
+			return (ss1[i] - ss2[i]);
+	}
+	if (x == 1)
+		return ((ft_strlen(s1) + 1) - ft_strlen(s2));
+	return (0);
 }
 
 int	ft_if_nmb(char	*str)

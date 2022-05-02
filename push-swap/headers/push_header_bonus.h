@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_header.h                                      :+:      :+:    :+:   */
+/*   push_header_bonus.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymirna <ymirna@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/26 21:38:53 by ymirna            #+#    #+#             */
-/*   Updated: 2022/03/25 16:51:35 by ymirna           ###   ########.fr       */
+/*   Created: 2022/03/24 19:59:01 by ymirna            #+#    #+#             */
+/*   Updated: 2022/03/25 00:04:52 by ymirna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_HEADER_H
-# define PUSH_HEADER_H
+#ifndef PUSH_HEADER_BONUS_H
+# define PUSH_HEADER_BONUS_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
@@ -35,10 +34,23 @@ typedef struct s_stack
 	struct s_stack	*prev;
 }	t_stack;
 
+typedef struct s_gnl
+{
+	int		line;
+	int		fd;
+	char	*str;
+	size_t	chr;
+	size_t	i;
+}	t_gnl;
+
+int		get_next_line(int fd_0, t_stack	***st);
 size_t	ft_strlen(const char	*s);
+char	*ft_sub(char *s, unsigned int start, size_t	len, int x);
+char	*ft_join(char *s1, char *s2, int x);
 long	ft_atoi(t_stack	*stack_a, const char	*str);
 int		ft_if_nmb(char	*str);
 char	*ft_substr(char const *s, unsigned int start, size_t	len);
+int		ft_strncmp(const char	*s1, const char	*s2, int n);
 char	**ft_split(char const	*s, char c);
 void	push_swap(t_stack	*st_a);
 void	int_swap(int	*arr, int	*l, int	*r);
@@ -63,5 +75,7 @@ void	do_rb(t_stack	**head);
 void	do_rr(t_stack	**head_a, t_stack	**head_b);
 void	do_rra(t_stack	**head);
 void	do_rrb(t_stack	**head);
+int		do_action(char	*act, t_stack	***st);
+void	do_chck(t_stack	*st_a, t_stack	*st_b, t_stack	**h_a, t_stack	**h_b);
 
 #endif

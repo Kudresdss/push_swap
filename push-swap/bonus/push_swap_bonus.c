@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymirna <ymirna@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 21:01:55 by ymirna            #+#    #+#             */
-/*   Updated: 2022/03/24 15:03:36 by ymirna           ###   ########.fr       */
+/*   Updated: 2022/03/25 17:00:06 by ymirna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/push_header.h"
+#include "../headers/push_header_bonus.h"
 
 void	sort_index(t_stack	*head, int	*tmp, int size)
 {
@@ -65,7 +65,10 @@ int	sorted_stack(t_stack	*head)
 void	push_swap(t_stack	*st_a)
 {
 	if (!sorted_stack(st_a->next))
+	{
+		write(1, "OK\n", 3);
 		return ;
+	}
 	if (add_index(st_a, st_a->size))
 	{
 		write(2, "Error\n", 6);

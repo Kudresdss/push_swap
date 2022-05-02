@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   checker_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymirna <ymirna@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/26 21:38:11 by ymirna            #+#    #+#             */
-/*   Updated: 2022/03/25 16:51:19 by ymirna           ###   ########.fr       */
+/*   Created: 2022/03/24 19:54:19 by ymirna            #+#    #+#             */
+/*   Updated: 2022/03/25 16:57:41 by ymirna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/push_header.h"
+#include "../headers/push_header_bonus.h"
 
 int	init_lists(t_stack	**current, int	*to_int, size_t	i, int	*size)
 {

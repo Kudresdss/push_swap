@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   functs_list.c                                      :+:      :+:    :+:   */
+/*   functs_list_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymirna <ymirna@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 18:27:51 by ymirna            #+#    #+#             */
-/*   Updated: 2022/03/24 19:44:29 by ymirna           ###   ########.fr       */
+/*   Updated: 2022/03/24 23:38:51 by ymirna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/push_header.h"
+#include "../headers/push_header_bonus.h"
 
 int	list_counter(t_stack	*head)
 {
@@ -18,6 +18,8 @@ int	list_counter(t_stack	*head)
 	int		i;
 
 	i = 1;
+	if (head->next == NULL)
+		return (0);
 	current = head;
 	while (current->next != head)
 	{
