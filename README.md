@@ -1,6 +1,8 @@
 # push_swap
 Push_swap project for 42cursus
 
+Currently works only on macOS and linux systems.
+
 Problem:
 Given a set of integers, sort it in ascending order using a predefined set of instructions using two stacks and the smallest number of moves. At the start, stack ```a``` recieves a random number of integer values and stack ```b``` that is used for sorting is empty. The instruction set is defined below. This program outputs a set of push_swap instructions that sorts the input integers in ascending order.
 
