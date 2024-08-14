@@ -14,7 +14,7 @@ Given a set of integers, sort it in ascending order using a predefined set of in
 ```rr``` : ```ra``` and ```rb``` at the same time. \
 ```rra``` : reverse rotate a - shift down all elements of stack a by 1. The last element becomes the first one. \
 ```rrb``` : reverse rotate b - shift down all elements of stack b by 1. The last element becomes the first one. \
-```rrr``` : ```rra``` and ```rrb``` at the same time. \
+```rrr``` : ```rra``` and ```rrb``` at the same time.
 
 Bonus part:
 A checker program that recieves a set of unsorted integers as an argument and then it opens the read from console that must recieve instructions for sorting the given stack. If the given instructions are correct and in the end the stack is sorted, checker will return an "OK", else it will return a "KO".
